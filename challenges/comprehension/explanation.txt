@@ -1,0 +1,23 @@
+I believe that this program is parsing through a text file and then making a hash that shows the number of times that each word appeared in that file.
+First on line 4 it is creating an empty hash (or associative array sorry I'm speaking in Ruby terms).
+Line 5 it is taking the text fie "input.txt" and sending it through the getline function. The output of getline is then being shoveled into the temp argument and the condition of the while loop is that this loop will continue until the getline function is complete which I'm guessing is when it has reached the end of the text file.
+Line 6 creates the temp variable which is an array. That array is created by running the split function on the temp argument which (if it is like the string method split in other languages) sets each item in the array as each word in the string %temp that are separated by a single whitespace. For example:
+
+string = "This is a test"
+output = string.split(" ")
+print output ---> ["This", "is", "a", "test"]
+
+Line 7 starts a foreach loop that will iterate through the temp array.
+Line 8 is an if statement that is checking to see if each item in the array contains a letter or number and if that is true then proceed to line 9 else do nothing.
+After passing the regex check, line 9-12 checks to see if that item is in the hash storage already. If the item is present then it finds the key of the item and adds 1 to its value. If the item is not present then it creates a key of that item and sets its value as 1. An example of the hash would look like:
+
+{"Daft" => 1, "Punk" => 1, "is" => 5, "awesome" => 3}
+
+When the while loop is complete storage is then run through a foreach iterator on line 18 where %a will represent each key and %b will represent each value. Line 19 will then print each each key and value pair in a string followed by a newline. An example output using the last hash example:
+
+"Daft 1"
+"Punk 1"
+"is 5"
+"awesome 3"
+
+Lastly I will attempt to gain some of those valuable bonus points. I think that @ represents a hash or associative array, $ represents a standard array, and % represents an argument. I'm not sure if I'm correct but I would love to if I was close.
